@@ -1,0 +1,6 @@
+nltk
+sentence-transformers
+faiss-cpu
+PyMuPDF
+transformers
+torch

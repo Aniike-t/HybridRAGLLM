@@ -1,0 +1,6 @@
+indices/
+*.pyc
+*.pdf
+*.faiss
+*.pkl
+*.npy

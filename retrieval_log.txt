@@ -1,0 +1,114 @@
+2025-03-01 11:56:24,984 - INFO - Loading indices from disk...
+2025-03-01 11:56:24,985 - INFO - Building indices...
+2025-03-01 11:56:25,092 - INFO - Extracted text length: 71585
+2025-03-01 11:56:25,191 - INFO - Number of Chunks created: 89
+2025-03-01 11:56:25,505 - INFO - Use pytorch device_name: cpu
+2025-03-01 11:56:25,506 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-01 11:56:44,235 - INFO - Indices built and saved in 19.25 seconds.
+2025-03-01 11:59:37,741 - INFO - Original Query: What are the key principles of sabotage described in the manual?
+2025-03-01 11:59:52,249 - INFO - Retrieved Chunk: chunk_6, Score: 0.7081
+2025-03-01 11:59:52,250 - INFO - Retrieved Chunk: chunk_8, Score: 0.6347
+2025-03-01 11:59:52,251 - INFO - Retrieved Chunk: chunk_23, Score: 0.6260
+2025-03-01 11:59:52,252 - INFO - Retrieved Chunk: chunk_46, Score: 0.6166
+2025-03-01 11:59:52,252 - INFO - Retrieved Chunk: chunk_41, Score: 0.5984
+2025-03-01 11:59:52,253 - INFO - Retrieved Chunk: chunk_56, Score: 0.5879
+2025-03-01 11:59:52,254 - INFO - Retrieved Chunk: chunk_78, Score: 0.5829
+2025-03-01 11:59:52,254 - INFO - Retrieved Chunk: chunk_80, Score: 0.5593
+2025-03-01 11:59:52,255 - INFO - Retrieved Chunk: chunk_53, Score: 0.5578
+2025-03-01 11:59:52,255 - INFO - Retrieved Chunk: chunk_0, Score: 0.5451
+2025-03-01 11:59:52,270 - INFO - LLM Response: The manual emphasizes **simplicity** and **opportunity**, focusing on acts that require little to no specialized skills or tools.  It stresses the importance of **low-risk** actions that are difficult to trace back to the saboteur.  Key principles include:
+
+* **Disruption over destruction:**  The goal is generally to hinder efficiency and create confusion, rather than to cause large-scale damage.  Delaying transportation, disrupting communication, and reducing production are prioritized.
+
+* **Targeting everyday objects and processes:**  Sabotage should focus on commonplace items and routines, like tools, machinery, raw materials, and administrative procedures.  Simple acts like misplacing tools, slightly damaging equipment, or introducing minor errors into paperwork are encouraged.
+
+* **Exploiting existing vulnerabilities:** Rather than introducing new weaknesses, saboteurs are encouraged to exploit pre-existing flaws in systems and processes.  This might involve exacerbating existing maintenance problems or taking advantage of lax security.
+
+* **Maintaining a low profile:**  Avoiding detection is paramount.  Saboteurs should blend in and make their actions appear accidental or due to incompetence.
+
+* **Psychological impact:** The manual emphasizes the cumulative effect of many small acts of sabotage, aiming to demoralize the enemy and erode their confidence.  Creating confusion and uncertainty is as important as causing material damage.
+
+* **Motivating the ordinary citizen:** The manual recognizes the importance of motivating individuals to engage in sabotage.  It suggests appealing to personal gain, fostering a sense of collective responsibility, and framing sabotage as a form of self-defense or retaliation.
+
+2025-03-01 12:02:57,675 - INFO - Original Query: How does the manual suggest disrupting transportation systems?
+2025-03-01 12:03:15,002 - INFO - Retrieved Chunk: chunk_15, Score: 0.6181
+2025-03-01 12:03:15,002 - INFO - Retrieved Chunk: chunk_4, Score: 0.4871
+2025-03-01 12:03:15,003 - INFO - Retrieved Chunk: chunk_40, Score: 0.4795
+2025-03-01 12:03:15,003 - INFO - Retrieved Chunk: chunk_9, Score: 0.4733
+2025-03-01 12:03:15,003 - INFO - Retrieved Chunk: chunk_28, Score: 0.4344
+2025-03-01 12:03:15,009 - INFO - Retrieved Chunk: chunk_47, Score: 0.4128
+2025-03-01 12:03:15,020 - INFO - Retrieved Chunk: chunk_50, Score: 0.4079
+2025-03-01 12:03:15,022 - INFO - Retrieved Chunk: chunk_21, Score: 0.3929
+2025-03-01 12:03:15,025 - INFO - Retrieved Chunk: chunk_33, Score: 0.3755
+2025-03-01 12:03:15,025 - INFO - Retrieved Chunk: chunk_18, Score: 0.3685
+2025-03-01 12:03:15,027 - INFO - LLM Response: The manual suggests several ways to disrupt transportation systems, targeting roads, railroads, and automotive vehicles:
+
+**Roads:**
+
+* **Misleading Signage:** Changing signposts at intersections and forks to send enemy vehicles in the wrong direction. Removing danger signals from curves and intersections in areas with heavy enemy traffic.
+* **False Information:** Giving incorrect directions to enemy personnel asking for guidance. Truck drivers spreading rumors and misinformation about road closures, detours, and bridge outages, particularly when enemy convoys are nearby.
+* **Road Damage:** Although considered a slower and less practical method for immediate impact, the manual suggests initiating damage to heavily trafficked roads, relying on passing traffic and weather to worsen the damage.  Construction workers can sabotage road construction by adding too much sand or water to concrete, or creating weak spots in the foundation.  Creating ruts in asphalt roads is also suggested.
+
+**Railroads:**
+
+* **Track Obstruction:** Placing obstacles on railway lines, such as a steel tie or a piece of rail, particularly on curves or grades.
+* **Train Sabotage:**  If on a train or a front car of a freight train, removing the packing from a journal box and replacing it with oily rags.
+
+**Automotive Vehicles:**
+
+* **Tire Damage:** Slashing or puncturing tires of unguarded vehicles. Placing nails or other sharp objects near parked vehicles to cause punctures when they move. Deflating tires by removing valve cores.
+* **Fuel Sabotage:** Draining fuel tanks. Contaminating fuel with water, sugar, sand, or other substances.
+* **Battery Sabotage:** Short-circuiting batteries by crossing terminals with a metal object. Removing a valve cap from a battery cell and puncturing the plates with a screwdriver. Adding iron or copper filings, copper coins, or vinegar to battery cells to shorten their lifespan.
+* **Gear Sabotage:** Removing lubricant or using an incorrect lubricant in transmissions and other gears. Insecurely fastening gear cases to cause damage through jolting.
+* **General Sabotage:** Putting abrasives in oil or grease. Clogging fuel lines and filters with debris.
+
+
+The manual emphasizes the cumulative effect of these seemingly small acts, stating that widespread simple sabotage can significantly hinder the enemy's war effort by wasting materials, manpower, and time.
+
+2025-03-01 12:04:29,292 - INFO - Original Query: What low-risk sabotage techniques are outlined in the manual?
+2025-03-01 12:04:44,158 - INFO - Retrieved Chunk: chunk_6, Score: 0.7238
+2025-03-01 12:04:44,159 - INFO - Retrieved Chunk: chunk_8, Score: 0.6463
+2025-03-01 12:04:44,159 - INFO - Retrieved Chunk: chunk_23, Score: 0.6421
+2025-03-01 12:04:44,160 - INFO - Retrieved Chunk: chunk_46, Score: 0.6083
+2025-03-01 12:04:44,160 - INFO - Retrieved Chunk: chunk_53, Score: 0.5942
+2025-03-01 12:04:44,161 - INFO - Retrieved Chunk: chunk_57, Score: 0.5918
+2025-03-01 12:04:44,161 - INFO - Retrieved Chunk: chunk_41, Score: 0.5811
+2025-03-01 12:04:44,162 - INFO - Retrieved Chunk: chunk_0, Score: 0.5673
+2025-03-01 12:04:44,162 - INFO - Retrieved Chunk: chunk_56, Score: 0.5563
+2025-03-01 12:04:44,163 - INFO - Retrieved Chunk: chunk_25, Score: 0.5503
+2025-03-01 12:04:44,169 - INFO - LLM Response: The manual outlines numerous low-risk sabotage techniques, generally aiming to disrupt, delay, and frustrate rather than cause large-scale destruction.  Here are some examples categorized by area:
+
+**General Office and Workplace:**
+
+* **Telephone Disruption:** Unscrewing earphones, removing diaphragms, making poor connections, putting coins in battery cells.
+* **Telegraph Disruption:** Delaying or garbling telegrams.
+* **Mail Sabotage:** Delaying or misdirecting mail.
+* **Meetings:** Holding unnecessary meetings, raising irrelevant issues.
+* **General Inefficiency:** Being careless, lazy, and generally inefficient.
+
+**Factory and Production:**
+
+* **Tools:** Dulling tools, misaligning machinery parts.
+* **Lubrication:** Using wrong lubricants, contaminating lubricants.
+* **Materials:** Mixing wrong materials, subtly damaging materials.
+* **Processes:** Slowing down production, causing minor delays.
+
+**Transportation:**
+
+* **Roads:** Placing obstacles on roads (minor ones).
+* **Automotive:** Misaligning wheels, damaging tires with chemicals (where available), overusing brakes.
+* **Rail:** Removing wadding from journal boxes.
+* **Water:** Spreading false rumors about navigability, navigating with excessive caution.
+
+**Specific Industries:**
+
+* **Coal Mining:** Damaging tools, weakening chains, derailing mine cars, mixing rocks with coal.
+
+**Other:**
+
+* **Public Buildings:** Placing coins under lightbulbs to blow fuses.
+* **Restrooms:** Clogging toilets.
+
+
+These acts are designed to be low-risk in terms of immediate detection and severe consequences for the saboteur.  They rely on creating cumulative disruption through seemingly minor acts.
+

@@ -9,7 +9,7 @@ from data_processing.chunking import create_overlapping_chunks
 
 class SignatureIndex:
     def __init__(self, signature_size: int = config.SIGNATURE_SIZE):
-        self.index: Dict[str, int] = {}  # chunk_id -> signature
+        self.index: Dict[str, int] = {}  
         self.signature_size = signature_size
 
     def build(self, chunks: List[Tuple[str, str]]):
@@ -23,7 +23,6 @@ class SignatureIndex:
         query_signature = calculate_signature(query, self.signature_size)
         candidate_chunk_ids = []
         for chunk_id, chunk_signature in self.index.items():
-            # Correct bitwise AND check:
             if (query_signature & chunk_signature) == query_signature:
                 candidate_chunk_ids.append(chunk_id)
         return candidate_chunk_ids

@@ -4,3 +4,6 @@ indices/
 *.faiss
 *.pkl
 *.npy
+*.txt
+config.py
+./retrieval_log.txt

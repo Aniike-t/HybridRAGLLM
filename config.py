@@ -1,14 +1,12 @@
-# config.py
-
 # --- PDF Processing ---
 PDF_EXTRACTOR = "PyMuPDF"
 
 # --- Chunking ---
-CHUNK_SIZE = 200  # Reduced for debugging
-OVERLAP_SIZE = 50 # Reduced
+CHUNK_SIZE = 200  
+OVERLAP_SIZE = 50 
 
 # --- Inverted Index ---
-STEMMING = True  # Try True/False
+STEMMING = True  
 STOP_WORDS = True
 TOKENIZER = "nltk"
 
@@ -34,9 +32,10 @@ METADATA_PATH = f"{INDEX_DIR}/metadata.json"
 DATA_DIR = "data"
 
 # --- Gemini API ---
-GEMINI_API_KEY = "AIzaSyCT6Nbne2XwYtuHX9htjcGqGDxhTYJaD28"  # Replace with your actual API key
-GEMINI_MODEL_NAME = "models/gemini-1.5-pro-latest"  # Or "gemini-pro-vision" if you need image support
-QUERY_EXPANSION = False #Disable temporarily
+GEMINI_API_KEY = "KEY"  
+GEMINI_MODEL_NAME = "models/gemini-1.5-pro-latest"  # Model
+QUERY_EXPANSION = True
+USE_GEMINI_QUERY_PROCESSING = True # True/False to enable
 
 # --- Ngrams ---
-NGRAMS = 0 #Disable temporarily
+NGRAMS = 0 

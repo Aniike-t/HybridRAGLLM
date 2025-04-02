@@ -35,10 +35,7 @@ class HybridRetriever:
         """Performs hybrid retrieval."""
 
         processed_query = self.query_processor.preprocess_query(query)
-
-        # --- ADD THIS PRINT STATEMENT FOR DEBUGGING ---
         print(f"Processed query: '{processed_query}'")
-        # ----------------------------------
 
         # 1. Initial Filtering (Inverted Index or Signature File)
         if self.inverted_index:
@@ -50,6 +47,8 @@ class HybridRetriever:
 
         print(f"Initial retrieval (inverted index) returned: {candidate_chunk_ids}")
 
+        # Get just the chunk IDs (we don't need the scores from inverted index *yet*)
+        candidate_chunk_ids = [chunk_id for chunk_id, _ in candidate_chunk_ids] # Get only chunk id
         candidate_chunk_ids = candidate_chunk_ids[:top_k_initial]
 
         if not candidate_chunk_ids:
@@ -62,16 +61,22 @@ class HybridRetriever:
         if not candidate_chunk_ids:
             return []
 
-        # Retrieve pre-calculated embeddings *directly* from the main embedding index.
-        candidate_indices = [self.embedding_index.next_index - len(self.embedding_index.chunk_id_mapping) + i  for i in range(len(self.embedding_index.chunk_id_mapping)) if self.embedding_index.chunk_id_mapping[i] in candidate_chunk_ids]
+        # CORRECTLY get the FAISS indices for the candidate chunk IDs
+        candidate_indices = [
+            faiss_index
+            for faiss_index, chunk_id in self.embedding_index.chunk_id_mapping.items()
+            if chunk_id in candidate_chunk_ids
+        ]
+
+        if not candidate_indices: #Handle if no indices are found
+            print("Warning: No matching FAISS indices found for candidate chunks.")
+            return []
 
         candidate_embeddings = self.embedding_index.index.reconstruct_n(candidate_indices[0], len(candidate_indices))
 
-
         # Create a temporary FAISS index.
-        temp_embedding_index = faiss.IndexFlatIP(self.embedding_index.dimension) # Use same dimension
-        temp_embedding_index.add(candidate_embeddings) # Add the embeddings
-
+        temp_embedding_index = faiss.IndexFlatIP(self.embedding_index.dimension)
+        temp_embedding_index.add(candidate_embeddings)
 
         # Get query embedding
         query_embedding = self.embedding_index.model.encode([query], convert_to_tensor=False)[0]
@@ -84,7 +89,8 @@ class HybridRetriever:
 
         # Convert indices back to doc_ids, and include scores
         scores = distances[0]
-        results = [(candidate_chunk_ids[indices[0][i]], scores[i]) for i in range(len(indices[0]))] #correct indices
+        #VERY IMPORTANT: Use the *original* candidate_chunk_ids, indexed by the *temporary* index
+        results = [(candidate_chunk_ids[indices[0][i]], scores[i]) for i in range(len(indices[0]))]
         return results
 
     def generate_response(self, query: str, retrieved_chunks: List[Tuple[str, float]]) -> str:
